@@ -8,7 +8,7 @@ class App extends Component {
 
   onSearch = async term => {
     const response = await unsplash.get(
-      `/search/photos?query=${term}&per_page=30`
+      `/search/photos?query=${term}&per_page=25`
     );
     this.setState({ images: response.data.results });
   };
