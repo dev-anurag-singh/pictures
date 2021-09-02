@@ -1,0 +1,21 @@
+.gallery {
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  column-gap: 2rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.image-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 2rem;
+  height: max-content;
+}
+.image-card {
+  & img {
+    width: 100%;
+    margin-bottom: 0;
+    height: auto;
+  }
+}

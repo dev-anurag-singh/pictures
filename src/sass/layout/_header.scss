@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem 1.5rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--color-white);
+
+  &__logo-box {
+    height: 4rem;
+    & a {
+      display: inline-block;
+      height: 4rem;
+    }
+  }
+
+  &__logo {
+    width: auto;
+    height: 100%;
+  }
+
+  &__search-box {
+    flex: 1;
+    margin: 0 2.5rem;
+  }
+}

@@ -1,11 +1,13 @@
 import ImageCard from './ImageCard';
 
 const ImageList = ({ images }) => {
-  const renderImage = images.map(img => {
-    return <ImageCard key={img.id} img={img} />;
-  });
+  const renderImageCards = () => {
+    return images.map((image, index) => {
+      return <ImageCard image={image} key={index} />;
+    });
+  };
 
-  return <div className='image-list'>{renderImage}</div>;
+  return <div className='image-list'>{renderImageCards()}</div>;
 };
 
 export default ImageList;

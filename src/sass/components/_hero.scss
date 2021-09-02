@@ -1,0 +1,22 @@
+.hero {
+  padding: 15rem 17% 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__text-box {
+    margin-bottom: 3rem;
+    color: var(--color-white);
+  }
+
+  &__search-box .search__input {
+    border-radius: 4px !important;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--color-white);
+
+    &:focus {
+      box-shadow: var(--shadow-dark);
+    }
+  }
+}
