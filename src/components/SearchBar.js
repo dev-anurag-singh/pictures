@@ -40,7 +40,7 @@ class SearchBar extends Component {
       <form onSubmit={this.onFormSubmit} className='search'>
         <input
           type='text'
-          placeholder='Search for free stock images'
+          placeholder='Search for Images'
           className='search__input'
           value={this.state.term}
           onChange={this.onTermChange}

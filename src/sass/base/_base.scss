@@ -34,8 +34,12 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem =10px
   scroll-behavior: smooth;
+
+  @media screen and(max-width:48em) {
+    font-size: 50%;
+  }
 }
 
 a {

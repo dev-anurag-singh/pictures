@@ -4,6 +4,14 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media screen and(max-width:48em) {
+    padding: 15rem 12% 20rem;
+  }
+
+  @media screen and(max-width:25em) {
+    padding: 15rem 10% 20rem;
+  }
+
   &__text-box {
     margin-bottom: 3rem;
     color: var(--color-white);
