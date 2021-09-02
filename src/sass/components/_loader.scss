@@ -1,0 +1,9 @@
+.loader {
+  border: 1rem solid var(--color-grey-light-1);
+  border-radius: 50%;
+  border-top: 1rem solid var(--color-primary);
+  width: 12rem;
+  height: 12rem;
+  animation: spin 2s linear infinite;
+  margin: 10rem auto;
+}

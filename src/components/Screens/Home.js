@@ -12,11 +12,18 @@ class Home extends Component {
     this.props.fetchImages(null);
   }
 
+  renderImageGallery() {
+    if (!this.props.allImages.length) {
+      return <div className='loader'></div>;
+    }
+    return <ImageGallery allImages={this.props.allImages} />;
+  }
+
   render() {
     return (
       <div className='home'>
         <Hero />
-        <ImageGallery allImages={this.props.allImages} />
+        {this.renderImageGallery()}
       </div>
     );
   }

@@ -2,11 +2,13 @@
 
 @import './base/base';
 @import './base/typography';
+@import './base/animations';
 
 @import './components/btn';
 @import './components/search-box';
 @import './components/hero';
-@import './components//gallery';
+@import './components/gallery';
+@import './components/loader';
 
 @import './layout/header';
 @import './layout/nav';

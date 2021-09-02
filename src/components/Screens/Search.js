@@ -10,15 +10,21 @@ class Search extends Component {
     //CALLING FETCH IMAGE ACTION CREATOR & POPULATING REDUX STORE WITH NEW IMAGES
     this.props.fetchImages(this.props.match.params.term);
   }
-  render() {
+
+  renderImageGallery() {
+    if (!this.props.allImages.length) {
+      return <div className='loader'></div>;
+    }
     return (
-      <div className='search-page'>
-        <ImageGallery
-          term={this.props.match.params.term}
-          allImages={this.props.allImages}
-        />
-      </div>
+      <ImageGallery
+        term={this.props.match.params.term}
+        allImages={this.props.allImages}
+      />
     );
+  }
+
+  render() {
+    return <div className='search-page'>{this.renderImageGallery()}</div>;
   }
 }
 

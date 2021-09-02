@@ -37,7 +37,7 @@ class ImageGallery extends Component {
     if (window.scrollY > this.state.scrollSearchAt) {
       this.setState({
         scrollSearchAt:
-          this.state.scrollSearchAt + window.innerWidth > 766 ? 4000 : 2000,
+          this.state.scrollSearchAt + (window.innerWidth > 766 ? 4000 : 2000),
         page: this.state.page + 1,
       });
       this.props.fetchImages(
