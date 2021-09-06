@@ -11,6 +11,15 @@ class Search extends Component {
     this.props.fetchImages(this.props.match.params.term);
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      this.props.clearImages();
+
+      //CALLING FETCH IMAGE ACTION CREATOR & POPULATING REDUX STORE WITH NEW IMAGES
+      this.props.fetchImages(this.props.match.params.term);
+    }
+  }
+
   renderImageGallery() {
     if (!this.props.allImages.length) {
       return <div className='loader'></div>;

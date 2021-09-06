@@ -6,6 +6,19 @@ import { fetchImages, clearImages } from './../actions';
 class SearchBar extends Component {
   state = { term: '' };
 
+  onUrlChange = () => {
+    if (history.location.pathname === `/search/${this.state.term}`) {
+      return;
+    } else {
+      this.setState({
+        term: history.location.pathname.substr(
+          8,
+          history.location.pathname.length
+        ),
+      });
+    }
+  };
+
   componentDidMount() {
     if (!this.state.term && history.location.pathname.includes('/search/')) {
       this.setState({
@@ -15,6 +28,8 @@ class SearchBar extends Component {
         ),
       });
     }
+
+    history.listen(this.onUrlChange);
   }
 
   // RUNS ONLY WHEN FORM IS SUBMITTED
